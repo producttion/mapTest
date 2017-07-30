@@ -35,17 +35,25 @@ var getValueRef = getdbRef.on('value', function (snapshot) {
   var snap = snapshot.val();
   var num0 = 0;
   console.log(snap)
-  if (snap == null){
-    ('.cbtn').css({ 'background-color': '#' });
-  }else{
-    $('.cbtn').css({ 'background-color': '#f44336' });
-  }
+
 
   if (getdbRef == getdbRef) {
-    $('.cbtn').css({ 'background-color': '#f44336' });
+    if (snap >= 1) {
+      $('.cbtn').css({ 'background-color': '#f44336' });
+    } else {
+      $('.cbtn').css({ 'background-color': '#' });
+    }
   } else {
-    $('.cbtn').css({ 'background-color': '#' });
   }
 })
 
 
+    setInterval(function () {
+    if (snap != null) {
+
+      $('.cbtn').css({ 'background-color': '#f44336' });
+    } else {
+
+      $('.cbtn').css({ 'background-color': '#' });
+    }
+  })
